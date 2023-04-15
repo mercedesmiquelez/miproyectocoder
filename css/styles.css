@@ -1,0 +1,314 @@
+/* reset css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #F7EDE2;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.gridContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1.2fr 0.5fr auto auto 1fr;
+    grid-template-areas:
+    "header header"
+    "nav nav"
+    "fotofondo fotofondo"
+    "actividades actividades"
+    "footer footer";
+    align-items: center;
+}
+
+.gridContainer div{
+    margin: 15px;
+    justify-items: center;
+}
+
+.logo{
+    width: 120px;
+    padding: 6px;
+    object-fit: contain;
+}
+
+.menu-btn{
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.menu-btn span{
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+
+.icon{
+    height: 50px;
+    padding: 5px;
+}
+
+.fotofondo{
+    height: 500px;
+    background-image: url(/images/Dieta-vida-sana-2.jpeg);
+    background-position: center;
+}
+
+.fotofondo {
+    grid-area: fotofondo;
+}
+
+.contenido-fotofondo {
+    width: 100%;
+    background-color: rgba(51, 47, 47, 0.8);
+    box-shadow: 2px 4px 8px rgb(68, 67, 67);
+    border-radius: 5px;
+    text-align: center;
+    padding: 50px 0;
+    margin: 0 auto;
+    position: relative;
+    top: 200px;
+}
+
+.colorblanco {
+    color: antiquewhite;
+    font-weight: 900;
+}
+
+.header{
+    grid-area: header;
+}
+
+header {
+    background-color: #84A59D;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.side-drawer{
+    width: 100%;
+    height: 100%;
+    background-color: #84A59D;
+    color: #F7EDE2;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.side-drawer ul{
+    list-style: none;
+    margin: 0;
+    padding: 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.side-drawer li{
+    margin: 1rem 0;
+}
+
+.side-drawer a{
+    color: #F7EDE2;
+    font-size: 2rem;
+}
+
+.nav{
+    grid-area: nav;
+}
+.nav {
+    background-color: #F5CAC3;
+    width: 100%;
+}
+
+.navPag {
+    background-color: #84A59D;
+    align-items: center;
+    width: 100%;
+}
+
+.navPag ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.actividades {
+    grid-area: actividades;
+}
+
+.actividades{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    color: #4b4e4e;
+}
+
+.comidasana{
+    margin: 20px 20px;
+}
+
+.img{
+    border-radius: 10px;
+}
+
+li {
+    padding: 10px;
+    list-style-type: none;
+}
+
+.link{
+    text-decoration: none;
+    margin: 10px;
+    padding: 8px;
+    color: #f6efe7;
+    border-radius: 5px;
+}
+
+.link:hover{
+    background-color: #cca26a;
+}
+
+.linkDark {
+    text-decoration: none;
+    margin: 10px;
+    padding: 8px;
+    color: #f6efe7;
+    font-weight: 700;
+    font-size: x-large;
+    border-radius: 5px;
+}
+
+.comments{
+    margin: 15px;
+    text-decoration: none;
+    border-radius: 6px;
+    color: #F28482;
+    overflow: hidden;
+    padding: 8px;
+    border-style: solid;  
+}
+
+.comments:hover{
+    background-color: #84A59D;
+    padding: 8px;
+    color: #F7EDE2;
+}
+
+.textoimagen {
+    width: 400px;
+}
+
+footer {
+    grid-area: footer;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    background-color: #84A59D;
+    color: #F7EDE2;
+    align-items: center;
+}
+
+.galleryContainer{
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    grid-template-rows: repeat(3, 200px);
+    gap: 10px 10px;
+    grid-template-areas: 'imagen1 imagen1 imagen1 imagen1 imagen2'
+                        'imagen3 imagen3 imagen6 imagen5 imagen5'
+                        'imagen3 imagen3 imagen6 imagen4 imagen4';
+    justify-content: center;
+    padding: 50px;
+}
+
+.imagen1 {
+    grid-area: imagen1;
+    background-image: url(../images/verduras.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.imagen2 {
+    grid-area: imagen2;
+    background-image: url(../images/carnes.jpg);
+    background-position: center;
+}
+
+.imagen3 {
+    grid-area: imagen3;
+    background-image: url(../images/lacteos.jpg);
+    background-position: center;
+}
+
+.imagen4 {
+    grid-area: imagen4;
+    background-image: url(../images/frutosSecos.jpeg);
+    background-position: center;
+}
+
+.imagen5 {
+    grid-area: imagen5;
+    background-image: url(../images/verduras.jpg);
+    background-position: center;
+}
+
+.imagen6 {
+    grid-area: imagen6;
+    background-image: url(../images/healthyperson.webp);
+    background-position: center;
+}
+
+.headerOne {
+    display: flex;
+    justify-content: center;
+}
+
+.navIzq ul,
+.navDer ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Tamaño mobile 480px */
+@media (max-width: 480px) {
+ 
+    }
+    
+/* Tamaño tablet 768px */    
+@media screen {
+    .menu-btn{
+        display: none;
+    }
+}
+/* Tamaño mobile 480px */
+@media (min-width: 1024px) {
+    .menu-btn{
+        display: none;
+    }
+}
+
+    /* header {
+        text-align: center;
+    }
+
+    li {
+        position: relative;
+        top: 20px;
+    } */
+/* }
